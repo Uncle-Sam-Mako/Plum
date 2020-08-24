@@ -1,4 +1,19 @@
+/*------Variables------*/
 
+/*fonts*/
+$font-primary : 'Montserrat', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+$font-third: 'Roboto', sans-serif;
+$font-fourth: 'Open Sans', sans-serif;
+/*Colors*/
+$color-first: #fff;
+$color-second: #ededed;
+$text-color: #706f6f;
+$primary-pink: #ed1459;
+
+
+
+/*------------------*/
 /*----Reset CSS-----*/
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -52,45 +67,69 @@ table {
 button{
     width: max-content;
 }
+img{
+    width: 100%;
+}
+p, h1, h2, h3, h4, h5, h6, i{
+    color: $text-color;
+}
 /*------------------------------------*/
 
 /*------fonts-------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 /*------------------*/
 
-/*------Variables------*/
 
-/*fonts*/
-$font-primary : 'Montserrat', sans-serif;
-$font-secondary: 'Poppins', sans-serif;
-$font-third: 'Roboto', sans-serif;
-/*Colors*/
-$color-first: #fff;
-
-
-
-/*------------------*/
 
 /*Button*/
 .butn{
     padding: 10px 20px;
+    transition: all ease 0.5s;
     border: none;   
     &--primary{
         background-color: #ffb400;
         color: white;
         font-weight: bold;
-        font-family: $font-primary;
-        transition: background ease 0.5s;
+        font-family: $font-secondary;
         border-radius: 20px;
         box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.13);
         &:hover{
-            background-color: #9e0089;
+            background-color: $primary-pink;
         }
         &:active{
             background: #ffb400;
         }
+    }
+    &--secondary{
+        background-color: $primary-pink;
+        color: $color-first;
+        
+        &:hover{
+            background: #ffb400;
+        }
+        &:active{
+            background-color: $primary-pink
+        }
+    }
+    &--about{
+        background: white;
+        color: $primary-pink !important;
+        &:hover{
+            box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.26);
+        }
+    }
+}
+@keyframes appear{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
     }
 }
 
@@ -98,42 +137,181 @@ $color-first: #fff;
 html{
     font: {
         size: 0.9em;
-        family: $font-third;
+        family: $font-secondary;
     }
 }
+.row.reverse{
+    flex-direction: row-reverse;
+}
+/*-------Header--------*/
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+}
 header{
-    background: url('../assets/img/Accueil.png') no-repeat center;
+    background: url('../assets/img/Accueil\ \(2\).png') no-repeat center;
     background-size: cover;
-    min-height: 100vh;
+    height: 100%;
 }
 .header{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 90%;
     &-text{
-        padding: 50px;
+        padding: 0 50px;
+        margin: auto;
         grid-column: 1;
         color: $color-first;
-        height: 100vh;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        
-        h2{
-            font: {
-                size: 3em;
-                family: $font-secondary;
-                weight: bold;
-            }
+        h1, p{
             color: $color-first;
         }
         h1{
-            font: {
-                size: 3em;
-                family: $font-secondary;
-                weight: 100;
+            &:first-child{
+                font: {
+                    size: 3em;
+                    family: $font-secondary;
+                    weight: bold;
+                }
             }
-            line-height: 0.4em;
+            &.success{
+                font: {
+                    family: $font-secondary;
+                    weight: 100;
+                }
+                line-height: 0.4em;
+            }
+            
         }
         
+    }
+}
+@media (min-width: 992px){
+    nav{
+        margin: 0 30px;
+        .nav-link{
+            margin: 10px;
+            &.download-link{
+                border: 2px solid #ffffff80;
+                border-radius: 20px;
+                padding: 5px 20px !important;
+                font-family: $font-secondary;
+                background-color: transparent;
+                transition: all ease 0.35s;
+                &:hover{
+                    background-color: #ffb400;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}
+nav{
+    font-family: $font-secondary;
+}
+.navbar{
+    &-collapse{
+        justify-content: flex-end;
+        
+    }
+}
+.features{
+    &-title{
+        position: relative;
+        font:{
+            family: $font-fourth;
+            weight: bold;
+        }
+        b{
+            color: $primary-pink;
+        }
+        &:after{
+            content: "";
+            width: 30%;
+            border-top: 3px solid #eee;
+            display: block;
+            margin: 10px 0;
+        }
+    }
+    &-img{
+        img{
+            //box-shadow: 0px 10px 15px 5px #eee;
+            animation: appear 3s ease-in-out 0.3s;
+            &.shadow{
+                box-shadow: 0px 10px 15px -1.5px #eee;
+            }
+        }
+    }
+    
+    .row{
+        align-items: center;
+    }
+}
+.banner{
+    display: flex;
+    align-items: center;
+    .wow-title{
+        line-height: 1.1em;
+        color: #9c9c9c;
+        font:{
+            weight: bolder;
+            size: 2.8em !important;
+            family: $font-fourth;
+        }
+        b{
+            color: $primary-pink;   
+        }
+    }
+}
+.about{
+    background: url('../assets/img/bnner.png') no-repeat; 
+    background-size: cover; 
+    background-position-x: -80px;
+    height: 100vh; 
+    margin: 50px 0 0 0; 
+    display: flex; 
+    align-items: center;
+    &-txt{
+        p, h1{
+            color: white;
+            font-family: $font-primary;
+        }
+        h1{
+            font-weight: bolder;
+            font-family: $font-fourth;
+            font-size: 3.5em;
+            letter-spacing: -0.08em;
+            width: max-content;
+            &:after{
+                content: "";
+                width: 30%;
+                border-top: 3px solid white;
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    }
+    img{
+        box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.281);
+    }
+}
+.small-banner{
+    padding: 20px 50px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.178);
+    border-radius: 10px;
+    align-items: center;
+    margin-top: -50px;
+    background-color: white;
+    i.fas{
+        color: #c9008c!important;
+    }
+    p.title{
+        text-transform: uppercase;
+        color: $primary-pink;
+        letter-spacing: 0.25em;
+        font-size: small;
+        line-height: 0.1em;
     }
 }

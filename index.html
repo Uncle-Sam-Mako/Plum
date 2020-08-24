@@ -1,27 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Rhoe</title>
-    <meta name="description" content="
-    Elikya Rhoe est un logiciel de gestion de magasin dont le but est de vous aider à mieux gérer votre entreprise au quotidien.">
+    <link rel="stylesheet" href="./assets/img/icon.png">
+    <meta name="description" content="Elikya Rhoe est un logiciel de gestion de magasin dont le but est de vous aider à mieux gérer votre entreprise au quotidien.">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.14.0-web/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+<style>
+    
+</style>
 <body>
     <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/img/logo.png" alt="rhoe-logo" style="width: 150px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Fonctionnalités</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">A propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link download-link" href="#">Télécharger</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        
+          
+        
         <div class="header container-fluid">
             <div class="header-text">
-                <h2>Dirigez votre entreprise vers</h2>
-                <h1>le succès</h1>
-                <p class="py-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio asperiores, laudantium soluta nostrum fuga iure officiis nobis.</p>
-                <button class="butn butn--primary">Get started</button>
+                <h1 class="h1-responsive">Guidez votre entreprise <br> vers le succès</h2>
+                <p class="py-4">Rhoe est un logiciel qui sécurise et optimise la gestion de votre magasin. <br> En utilisant Rhoe, vous placez votre business sur le chemin de son succès certain.</p>
+                <button class="butn butn--primary">Commencer</button>
             </div>
         </div>
     </header>
+    <div class="container">
+        <div class="small-banner row">
+            <div class="col- m-auto">
+                <i class="fas fa-thumbs-up fa-5x"></i>
+            </div>
+            <div class="col-9 ml-auto pt-3">
+                <p class="title">Elikya Rhoe</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nemo quibusdam excepturi magni, natus quisquam, ducimus molestias perspiciatis hic reprehenderit magnam quia odit deleniti tempora debitis, voluptatum et dolor blanditiis.</p>
+            </div>
+        </div>
+    </div>
+        <section class="features mt-5 py-5">
+            <div class="container">
+                <!-- <h2 class="h2-responsive text-center">Features</h2> -->
+                <!-- <div class="row my-5">
+                    <div class="col-lg-6 mr-auto">
+                        <h1 class="h1-responsive wow-title features-title">
+                            <b>Rhoe</b> se charge de la gestion de votre magasin. Gagnez plus en rapisité et en performance
+                        </h1>
+                    </div>
+                    <div class="features-img col-lg-5 ml-auto">
+                        <img class="" src="./assets/img/3728.png" alt="">
+                    </div>
+                </div> -->
+                
+                <div class="row my-5 reverse">
+                    <div class="col-lg-5 ml-auto">
+                        <h1 class="h1-responsive features-title">
+                            Reprenez le <b>contrôle</b> sur vos produits
+                        </h1>
+                        <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio enim, natus delectus voluptate ipsum voluptas officiis cum consequuntur eos est maiores voluptatem ipsa, itaque neque aliquam quam, expedita repudiandae architecto.</p>
+                    </div>
+                    <div class="features-img col-lg-6 mr-auto">
+                        <img class="" src="./assets/img/3728.png" alt="">
+                    </div>
+                </div>
+                <div class="row my-5">
+                    <div class="col-lg-5 mr-auto">
+                        <h1 class="h1-responsive features-title">
+                            La <b>Rapidité</b> à votre portée
+                        </h1>
+                        <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio enim, natus delectus voluptate ipsum voluptas officiis cum consequuntur eos est maiores voluptatem ipsa, itaque neque aliquam quam, expedita repudiandae architecto.</p>
+                    </div>
+                    <div class="features-img col-lg-6 ml-auto">
+                        <img class="shadow" src="./assets/img/screenshot.png" alt="">
+                    </div>
+                </div>
+                <div class="row my-5 reverse">
+                    <div class="col-lg-5 ml-auto">
+                        <h1 class="h1-responsive features-title">
+                            <b>Anticipation</b> sur vos prochains approvisionnements
+                        </h1>
+                        <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio enim, natus delectus voluptate ipsum voluptas officiis cum consequuntur eos est maiores voluptatem ipsa, itaque neque aliquam quam, expedita repudiandae architecto.</p>
+                    </div>
+                    <div class="features-img col-lg-6 mr-auto">
+                        <img class="shadow" src="./assets/img/screenshot.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="about" style=""> 
+            <div class="container">
+                <div class="row">
+                    <div class="col ml-auto py-3 about-txt">
+                        <h1>about us</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste sed adipisci dolores, aperiam, qui velit sunt architecto, hic doloribus cum neque voluptatibus tempora sit. Soluta maxime facilis distinctio veritatis fugiat?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur asperiores iste porro maiores, incidunt reprehenderit enim iusto repudiandae obcaecati vitae, aliquid sunt veniam tempore itaque eveniet doloremque repellendus soluta ut?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur asperiores iste porro maiores, incidunt reprehenderit enim .</p>
+                        <button class="butn butn--about">More about us</button>
+                    </div>
+                    <div class="col">
+                        <img src="./assets/img/workplace-1245776_960_720.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="banner" style="background: #eee; height: 400px;"> 
+                <div class="container">
+                    
+                </div>
+            </div>
+        </section>
+    </body>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="./js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
