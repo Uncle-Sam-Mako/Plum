@@ -5,6 +5,3 @@ $(document).ready(function(){
 
 //Scroll appear
 // GENERAL SETTING
-window.sr = ScrollReveal();
-sr.reveal('.team', { duration: 2000 });
-sr.reveal('.bar',);
