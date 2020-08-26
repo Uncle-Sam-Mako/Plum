@@ -12,9 +12,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <style>
-    
+    #loader{
+    	width: 100%;
+    	height: 100%;
+    	background: #eee;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    }
+    #loader img{
+    	width: 50px;
+    }
 </style>
 <body>
+	<div id="loader">
+        <div class="loader-animation">
+    		<img src="./assets/img/preloader.gif">
+        </div>
+        <div class="bounce-shadow"></div>
+    </div>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#">
@@ -50,35 +66,12 @@
             <div class="header-text">
                 <h1 class="h1-responsive">Guidez votre entreprise <br> vers le succès</h2>
                 <p class="py-4">Rhoe est un logiciel qui sécurise et optimise la gestion de votre magasin. <br> En utilisant Rhoe, vous placez votre business sur le chemin de son succès certain.</p>
-                <button class="butn butn--primary">Commencer</button>
+                <button class="butn butn--primary">Télécharger</button>
             </div>
         </div>
     </header>
-    <div class="container">
-        <div class="small-banner row">
-            <div class="col- m-auto">
-                <i class="fas fa-thumbs-up fa-5x"></i>
-            </div>
-            <div class="col-9 ml-auto pt-3">
-                <p class="title">Elikya Rhoe</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nemo quibusdam excepturi magni, natus quisquam, ducimus molestias perspiciatis hic reprehenderit magnam quia odit deleniti tempora debitis, voluptatum et dolor blanditiis.</p>
-            </div>
-        </div>
-    </div>
         <section class="features mt-5 py-5">
             <div class="container">
-                <!-- <h2 class="h2-responsive text-center">Features</h2> -->
-                <!-- <div class="row my-5">
-                    <div class="col-lg-6 mr-auto">
-                        <h1 class="h1-responsive wow-title features-title">
-                            <b>Rhoe</b> se charge de la gestion de votre magasin. Gagnez plus en rapisité et en performance
-                        </h1>
-                    </div>
-                    <div class="features-img col-lg-5 ml-auto">
-                        <img class="" src="./assets/img/3728.png" alt="">
-                    </div>
-                </div> -->
-                
                 <div class="row my-5 reverse">
                     <div class="col-lg-5 ml-auto">
                         <h1 class="h1-responsive features-title">
@@ -87,7 +80,7 @@
                         <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio enim, natus delectus voluptate ipsum voluptas officiis cum consequuntur eos est maiores voluptatem ipsa, itaque neque aliquam quam, expedita repudiandae architecto.</p>
                     </div>
                     <div class="features-img col-lg-6 mr-auto">
-                        <img class="" src="./assets/img/3728.png" alt="">
+                        <img class="" src="./assets/img/illustration.png" alt="">
                     </div>
                 </div>
                 <div class="row my-5">
@@ -109,7 +102,7 @@
                         <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio enim, natus delectus voluptate ipsum voluptas officiis cum consequuntur eos est maiores voluptatem ipsa, itaque neque aliquam quam, expedita repudiandae architecto.</p>
                     </div>
                     <div class="features-img col-lg-6 mr-auto">
-                        <img class="shadow" src="./assets/img/screenshot.png" alt="">
+                        <img class="shadow" src="./assets/img/screenshot2.png" alt="">
                     </div>
                 </div>
                 
@@ -118,16 +111,17 @@
         <section class="about" style=""> 
             <div class="container">
                 <div class="row">
-                    <div class="col ml-auto py-3 about-txt">
+                    <div class="col-lg ml-auto py-3 about-txt">
                         <h1>about us</h1>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste sed adipisci dolores, aperiam, qui velit sunt architecto, hic doloribus cum neque voluptatibus tempora sit. Soluta maxime facilis distinctio veritatis fugiat?</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur asperiores iste porro maiores, incidunt reprehenderit enim iusto repudiandae obcaecati vitae, aliquid sunt veniam tempore itaque eveniet doloremque repellendus soluta ut?</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur asperiores iste porro maiores, incidunt reprehenderit enim .</p>
-                        <button class="butn butn--about">More about us</button>
+                        
                     </div>
-                    <div class="col">
-                        <img src="./assets/img/workplace-1245776_960_720.webp" alt="">
+                    <div class="col-lg">
+                        <img src="./assets/img/team" alt="">
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -145,5 +139,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
+    <script src='./js/script.js'></script>
 </body>
 </html>
