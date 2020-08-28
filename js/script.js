@@ -15,5 +15,4 @@ $('a[href^="#"]').on('click', function(e){
 		}, "fast");
 	}
 });
-//Scroll appear
-// GENERAL SETTING
+

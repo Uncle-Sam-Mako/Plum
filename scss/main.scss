@@ -98,7 +98,7 @@ p, h1, h2, h3, h4, h5, h6, i{
 
 /*Button*/
 .butn{
-    padding: 10px 20px;
+    padding: 10px 25px;
     transition: all ease 0.5s;
     border: none;   
     &--primary{
@@ -126,25 +126,16 @@ p, h1, h2, h3, h4, h5, h6, i{
             background-color: $primary-pink
         }
     }
-    &--about{
-        background: white;
-        color: $primary-pink !important;
+    &--third{
+        background: $primary-pink;
+        color: $color-first;
         &:hover{
-            box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.26);
+            box-shadow: 0px 0px 10px 2px #eee;
+            background: $color-first;
+            color: $primary-pink;
         }
     }
 }
-@keyframes appear{
-    0%{
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0%);
-        opacity: 1;
-    }
-}
-
 /*-------*/
 html{
     font: {
@@ -249,8 +240,6 @@ nav{
     }
     &-img{
         img{
-            //box-shadow: 0px 10px 15px 5px #eee;
-            //animation: appear 3s ease-in-out 0.3s;
             &.shadow{
                 box-shadow: 0px 10px 15px -1.5px #eee;
             }
@@ -308,4 +297,56 @@ nav{
     img{
         box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.281);
     }
+}
+.contact{
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-container{
+        .contact-form{
+            padding: 15px !important;
+            form{
+                display: flex;
+            }
+            input, textarea{
+                width: 100%;
+                padding: 7px 20px;
+                border: 1px solid #ddd;
+                margin: 10px;
+                border-radius: 5px;
+                &:focus{
+                    border-color: $primary-pink;
+                    outline: none;
+                    box-shadow: 0px 0px 10px  1px#eee;
+                }
+            }
+        }
+        .contact-title{
+            font:{
+                weight: bolder;
+                family: $font-fourth;
+            }
+            color: $primary-pink;
+            margin-bottom: 15px;
+            padding: 10px;
+            width: max-content;
+            &:after{
+                content: "";
+                width: 30%;
+                border-top: 3px solid #eee;
+                display: block;
+                margin: 10px 0;
+            }
+        }
+        .contact-img{
+            align-self: flex-end;
+        }
+        form{
+            position: relative;
+            
+        }
+    }
+    
 }
