@@ -41,6 +41,7 @@ time, mark, audio, video {
 	font: inherit;
     vertical-align: baseline;
     scroll-behavior: smooth;
+    font-family: $font-fourth;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -140,7 +141,6 @@ p, h1, h2, h3, h4, h5, h6, i{
 html{
     font: {
         size: 0.9em;
-        family: $font-secondary;
     }
 }
 .row.reverse{
@@ -152,7 +152,7 @@ html, body{
     overflow-x: hidden;
 }
 header{
-    background: url('../assets/img/home.jpg') no-repeat center;
+    background: url('../assets/img/home.png') no-repeat center;
     background-size: cover;
     height: 100%;
 }
