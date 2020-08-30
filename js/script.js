@@ -27,7 +27,7 @@ ScrollReveal().reveal('.fromLeft', {delay: 1500, origin: 'left'});
  $(document).ready(function() {
 	var duration = 500;
 	$(window).scroll(function() {
-	if ($(this).scrollTop() > 200) {
+	if ($(this).scrollTop() > 500) {
 		$('.navbarSticky').fadeIn(duration);
 	} else {
 		$('.navbarSticky').fadeOut(duration);

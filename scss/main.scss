@@ -354,7 +354,7 @@ nav{
     }    
 }
 
-.cRetour {
+.toTop {
     border-radius:3px;
     padding:10px;
     font-size:15px;
@@ -368,14 +368,12 @@ nav{
     bottom: 1em;
     right: 20px;
     display: none;
-   
-  }
-.cRetour:before{ content: "\25b2"; }
-.cRetour:hover{
-background:rgba(237, 20, 89, 0.692);
-transition:all ease-in 0.2s;
+    &:before{ content: "\25b2"; }
+    &:hover{
+        background:rgba(237, 20, 89, 0.692);
+        transition:all ease-in 0.2s;
+    }
 }
-
 footer{
     background: url('../assets/img/footer.svg') no-repeat;
     background-size: cover;
