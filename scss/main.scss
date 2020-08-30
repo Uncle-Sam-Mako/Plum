@@ -92,6 +92,8 @@ p, h1, h2, h3, h4, h5, h6{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 1000;
 }
 #loader img{
     width: 50px;
@@ -146,7 +148,7 @@ html{
     flex-direction: row-reverse;
 }
 /*-------Header--------*/
-html, body{
+html{
     height: 100%;
     overflow-x: hidden;
 }
@@ -160,6 +162,7 @@ header{
     grid-template-columns: 1fr 1fr;
     height: 90%;
     &-text{
+        position: relative;
         padding: 0 50px;
         margin: auto;
         grid-column: 1;
@@ -190,9 +193,32 @@ header{
         
     }
 }
+.navbarSticky{
+    padding: 0 20px;
+    background: #fff;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.6s;
+    z-index: 100;
+    display: none;
+    &.sticky{
+        display: block;
+        background-color: $color-first;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.171);
+        .nav-link{
+            color: $text-color !important;
+            transition: 0.6s;
+            &:hover{
+                color: #aaa !important;
+            }
+        }
+    }
+}
 @media (min-width: 992px){
     nav{
-        margin: 0 30px;
+        padding: 0 30px;
         .nav-link{
             margin: 10px;
             &.download-link{
@@ -208,6 +234,9 @@ header{
             }
         }
     }
+}
+nav{
+    
 }
 .navbar{
     &-collapse{
@@ -243,22 +272,6 @@ header{
     
     .row{
         align-items: center;
-    }
-}
-.banner{
-    display: flex;
-    align-items: center;
-    .wow-title{
-        line-height: 1.1em;
-        color: #9c9c9c;
-        font:{
-            weight: bolder;
-            size: 2.8em !important;
-            family: $font-fourth;
-        }
-        b{
-            color: $primary-pink;   
-        }
     }
 }
 .about{
@@ -342,6 +355,19 @@ header{
             
         }
     }    
+}
+
+.toTop{
+    background: #ffb400;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 2px #eee;
+    position: fixed;
+	right: 20px;
+	bottom:	50px;
+	display: none;
+	z-index: 2000;
 }
 footer{
     background: url('../assets/img/footer.svg') no-repeat;
