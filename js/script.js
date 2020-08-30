@@ -1,9 +1,3 @@
-//navbar sticky
-  
-	$(window).click(function(){
-		$('.navbarSticky').addClass('sticky');
-	})
-  
 
 //Preloader
 $(document).ready(function(){
@@ -34,9 +28,9 @@ ScrollReveal().reveal('.fromLeft', {delay: 1500, origin: 'left'});
 	var duration = 500;
 	$(window).scroll(function() {
 	if ($(this).scrollTop() > 200) {
-		$('.cRetour').fadeIn(duration);
+		$('.navbarSticky').fadeIn(duration);
 	} else {
-		$('.cRetour').fadeOut(duration);
+		$('.navbarSticky').fadeOut(duration);
 	}
 	});
 				
@@ -46,3 +40,5 @@ ScrollReveal().reveal('.fromLeft', {delay: 1500, origin: 'left'});
 	return false;
 	})
 });
+
+
