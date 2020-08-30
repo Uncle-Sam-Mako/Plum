@@ -27,3 +27,22 @@ ScrollReveal().reveal('.fromTop', {delay: 600, origin: 'top' });
 ScrollReveal().reveal('.fromRight', {delay: 1000, origin: 'right'});
 ScrollReveal().reveal('.fromBottom', {delay: 1200, origin: 'bottom'});
 ScrollReveal().reveal('.fromLeft', {delay: 1500, origin: 'left'});
+
+//Bouton retour vers le haut
+
+ $(document).ready(function() {
+	var duration = 500;
+	$(window).scroll(function() {
+	if ($(this).scrollTop() > 200) {
+		$('.cRetour').fadeIn(duration);
+	} else {
+		$('.cRetour').fadeOut(duration);
+	}
+	});
+				
+	$('.cRetour').click(function(event) {
+		event.preventDefault();
+	$('html, body').animate({scrollTop: 0}, duration);
+	return false;
+	})
+});

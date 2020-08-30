@@ -226,7 +226,7 @@
                 </div>
             </div>
         </section>
-        <div class="appear cRetour" data-delai="0"></div>
+        <div class="cRetour" data-delai="0"></div>
         <a href="#top" class="toTop" title="Revenir en haut de page">Haut</a>
         <footer>
             <div class="container">
@@ -270,5 +270,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src='./js/script.js'></script>
+    <script>            
+        $(document).ready(function() {
+          var duration = 500;
+          $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+              $('.cRetour').fadeIn(duration);
+            } else {
+              $('.cRetour').fadeOut(duration);
+            }
+          });
+                        
+         $('.cRetour').click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, duration);
+            return false;
+          })
+        });
+        </script>
 </body>
 </html>
