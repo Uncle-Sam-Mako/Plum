@@ -160,6 +160,7 @@ header{
 @media (max-width: 992px){
     header{
         background: url('../assets/img/home_xsmall.jpg');
+        z-index: 1000;
     }
     .header{
         display: block;
@@ -171,6 +172,9 @@ header{
                 margin: 0 auto;
             }
         }
+    }
+    .nav-container{
+        z-index: 10000;
     }
 }
 @media (min-width: 992px){
