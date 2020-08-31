@@ -27,18 +27,12 @@ ScrollReveal().reveal('.fromLeft', {delay: 1500, origin: 'left'});
  $(document).ready(function() {
 	var duration = 500;
 	$(window).scroll(function() {
-	if ($(this).scrollTop() > 500) {
-		$('.navbarSticky').fadeIn(duration);
-	} else {
-		$('.navbarSticky').fadeOut(duration);
-	}
+		if ($(this).scrollTop() > 500) {
+			$('.navbarSticky').fadeIn(duration);
+		} else {
+			$('.navbarSticky').fadeOut(duration);
+		}
 	});
-				
-	$('.cRetour').click(function(event) {
-		event.preventDefault();
-	$('html, body').animate({scrollTop: 0}, duration);
-	return false;
-	})
 });
 
 
